@@ -1,17 +1,12 @@
 package com.hero.mvpherodemo.student.contract;
 
-
-import com.hero.mvpherodemo.mvp.BaseCallBack;
-import com.hero.mvpherodemo.mvp.BaseModel;
-import com.hero.mvpherodemo.mvp.BasePresenter;
 import com.hero.mvpherodemo.mvp.BaseView;
-import com.hero.mvpherodemo.student.interfaces.StudentLoadDataCallback;
 
 import java.util.Map;
 
 /**
  * <pre>
- *
+ * 契约接口
  * </pre>
  */
 public interface StudentContract {

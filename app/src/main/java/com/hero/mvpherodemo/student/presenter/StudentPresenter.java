@@ -1,5 +1,7 @@
 package com.hero.mvpherodemo.student.presenter;
 
+import android.content.Context;
+
 import com.hero.mvpherodemo.mvp.BasePresenter;
 import com.hero.mvpherodemo.student.contract.StudentContract;
 import com.hero.mvpherodemo.student.interfaces.StudentLoadDataCallback;
@@ -53,5 +55,14 @@ public class StudentPresenter extends BasePresenter<StudentContract.View, Studen
         }
         getMvpView().dismissLoading();
         getMvpView().showFailureData(errorData);
+    }
+
+    @Override
+    public Context getContext() {
+        if (!isViewDestory()) {
+            return getMvpView().getContext();
+        }
+
+        return null;
     }
 }

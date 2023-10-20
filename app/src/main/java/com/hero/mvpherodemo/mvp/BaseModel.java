@@ -39,6 +39,9 @@ public abstract class BaseModel<I extends BaseCallBack> {
         return false;
     }
 
+    /**
+     * 提供回收方法
+     */
     public void destory() {
         if (iCallBackWeakRef == null) {
             return;
