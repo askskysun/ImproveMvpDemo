@@ -13,7 +13,7 @@ import com.hero.mvpherodemo.student.model.StudentModel;
 public class StudentPresenter extends BasePresenter<StudentContract.View, StudentModel> implements StudentContract.Presenter, StudentLoadDataCallback {
 
     @Override
-    protected StudentModel createModel(BasePresenter presenter) {
+    protected StudentModel createModel() {
         return new StudentModel(this);
     }
 

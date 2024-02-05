@@ -15,10 +15,10 @@ public abstract class BasePresenter<V extends BaseView, M extends BaseModel> {
     protected M model;
 
     public BasePresenter() {
-        model = createModel(this);
+        model = createModel();
     }
 
-    protected abstract M createModel(BasePresenter presenter);
+    protected abstract M createModel();
 
     /**
      * 获取一个view的引用
@@ -74,6 +74,9 @@ public abstract class BasePresenter<V extends BaseView, M extends BaseModel> {
             iViewWeakRef.clear();
         }
         iViewWeakRef = null;
-        model.destory();
+        if (model != null) {
+            model.destory();
+        }
+        model = null;
     }
 }

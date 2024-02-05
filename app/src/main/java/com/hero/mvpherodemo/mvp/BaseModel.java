@@ -41,6 +41,7 @@ public abstract class BaseModel<I extends BaseCallBack> {
 
     /**
      * 提供回收方法
+     * 子类可继承，处理取消请求、资源加载等
      */
     public void destory() {
         if (iCallBackWeakRef == null) {
